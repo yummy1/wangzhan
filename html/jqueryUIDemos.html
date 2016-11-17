@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jqueryUI的练习</title>
+    <link rel="stylesheet" href="../jqueryUI-1.12.1/jquery-ui.css" type="text/css">
+    <!--<link rel="stylesheet" href="../jqueryUI/jquery-ui.structure.css">-->
+    <!--<link rel="stylesheet" href="../jqueryUI/jquery-ui.theme.css">-->
+    <style>
+        #draggable{width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; border: 1px solid #e0e0e0}
+        #droppable{width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px;border: 1px solid #ff0000}
+
+        #resizable{width: 150px; height: 150px; padding: 0.5em; position: absolute; top:200px;}
+        #resizable h3{text-align: center; margin: 0;}
+
+        #selectable .ui-selecting{background: #ff0000;}
+        #selectable .ui-selected{background: #00ff00; color: white;}
+        #selectable{list-style-type: none; margin: 0; padding: 0; width: 60%; position: absolute;top:370px;}
+        #selectable li{margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px;}
+
+        #sortable {list-style-type: none; margin: 0; padding: 0; width: 60%;position: absolute;top:500px;}
+        #sortable li{margin: 0 3px 3px 3px; padding: 0.4em;padding-left: 1.5em; font-size: 1.4em; height: 18px;}
+        #sortable li span{position: absolute; margin-left: -1.3em;}
+
+        #accordion{position: absolute;top:650px;}
+
+        .tags{position: absolute;top:1050px}
+
+        .button{position: absolute;top:1100px;}
+        .cssBtn{position: absolute;top:1200px;}
+
+        .checkboxM{position: absolute;top:1300px;}
+
+        .controlgroupM{position: absolute;top:1750px;}
+        .ui-controlgroup-vertical{width: 150px;}
+        .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+        .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label{text-align: center;}
+        #car-type-button{width: 120px;}
+        .ui-controlgroup-horizontal .ui-spinner-input{width: 20px;}
+
+        .datepicker{position: absolute;top:2150px;}
+
+        #dialog{position: absolute;top:2200px;}
+
+        #menu{position: absolute;top:2250px;}
+
+        #progressbar{position: absolute;top:2500px;}
+
+        #tabs{position: absolute;top:2600px;}
+
+        .tips{position: absolute;top:2800px;}
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../jqueryUI-1.12.1/jquery-ui.js"></script>
+    <script>
+<!--1-->
+        $(function () {
+            $("#draggable").draggable();
+            $("#droppable").droppable({
+                drop:function (event, ui) {
+                    $(this)
+                       .addClass("ui-state-highlight")
+                       .find("p")
+                            .html("Dropped")
+                }
+            });
+<!--2-->
+            $("#resizable").resizable();
+<!--3-->
+            $("#selectable").selectable();
+<!--4-->
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+<!--5-->
+            $("#accordion").accordion();
+<!--6-->
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source:availableTags
+            });
+<!--7-->
+            $(".button input[type=submit], .widget a, .widget button").button();
+            $(".button button", ".button input", ".button a").click(function (event) {
+                event.preventDefault();
+            });
+<!--8-->
+            $(".checkboxM input").checkboxradio();
+<!--9-->
+            $(".controlgroup").controlgroup()
+            $(".ui-controlgroup-vertical").controlgroup({
+                "direction":"vertical"
+            });
+<!--10-->
+            $( "#datepicker" ).datepicker();
+<!--11-->
+            $("#dialog").dialog();
+<!--12-->
+            $("#menu").menu();
+<!--13-->
+            $("#progressbar").progressbar({
+                value:60
+            });
+<!--14-->
+            $("#tabs").tabs();
+<!--15-->
+            $( document ).tooltip();
+        });
+    </script>
+</head>
+<body>
+<!--1-->
+    <div id="draggable" class="ui-widget-content">
+        <p>Drag me to my target</p>
+    </div>
+    <div id="droppable" class="ui-accordion-header">
+        <p>Drop here</p>
+    </div>
+    <hr/>
+<!--2-->
+    <div id="resizable" class="ui-widget-content">
+        <h3 class="ui-widget-header">Resizable</h3>
+    </div>
+<!--3-->
+    <ol id="selectable">
+        <li class="ui-widget-content">Item 1</li>
+        <li class="ui-widget-content">Item 2</li>
+        <li class="ui-widget-content">Item 3</li>
+    </ol>
+<!--4-->
+    <ul id="sortable">
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+    </ul>
+<!--5-->
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                suscipit faucibus urna.
+            </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+            <p>
+                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+            <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+            </ul>
+        </div>
+        <h3>Section 4</h3>
+        <div>
+            <p>
+                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                mauris vel est.
+            </p>
+            <p>
+                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos himenaeos.
+            </p>
+        </div>
+    </div>
+<!--6-->
+    <div class="ui-widget tags">
+        <label for="tags">Tags:</label>
+        <input id="tags">
+    </div>
+<!--7-->
+    <div class="widget button">
+        <h1>Widget Buttons</h1>
+        <button>A button element</button>
+        <input type="submit" value="A submit button">
+        <a href="#">An anchor</a>
+    </div>
+    <div class="cssBtn">
+        <h1>CSS Buttons</h1>
+        <button class="ui-button ui-widget ui-corner-all">A button element</button>
+        <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+        <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+    </div>
+<!--8-->
+    <div class="widget checkboxM">
+        <h1>Checkbox and radio button widgets</h1>
+        <h2>Radio Group</h2>
+        <fieldset>
+            <legend>Select a Location:</legend>
+            <label for="radio-1">New York</label>
+            <input type="radio" name="radio-1" id="radio-1">
+            <label for="radio-2">Paris</label>
+            <input type="radio" name="radio-1" id="radio-2">
+            <label for="radio-3">London</label>
+            <input type="radio" name="radio-1" id="radio-3">
+        </fieldset>
+        <h2>Checkbox</h2>
+        <fieldset>
+            <legend>Hotel Ratings:</legend>
+            <label for="checkbox-1">苹果</label>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1">
+            <label for="checkbox-2">香蕉</label>
+            <input type="checkbox" name="checkbox-2" id="checkbox-2">
+            <label for="checkbox-3">橘子</label>
+            <input type="checkbox" name="checkbox-3" id="checkbox-3">
+            <label for="checkbox-4">葡萄</label>
+            <input type="checkbox" name="checkbox-4" id="checkbox-4">
+        </fieldset>
+        <h2>Checkbox nested in label</h2>
+        <fieldset>
+            <legend>Bed Type:</legend>
+            <label for="checkbox-nested-1">你
+                <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+            </label>
+            <label for="checkbox-nested-2">我
+                <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+            </label>
+            <label for="checkbox-nested-3">他
+                <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+            </label>
+        </fieldset>
+    </div>
+<!--9-->
+    <div class="widget controlgroupM">
+        <h1>Controlgroup</h1>
+        <fieldset>
+            <legend>Rental Car</legend>
+            <div class="controlgroup">
+                <select id="car-type">
+                    <option>苹果</option>
+                    <option>香蕉</option>
+                    <option>橘子</option>
+                    <option>葡萄</option>
+                    <option>柚子</option>
+                </select>
+                <label for="transmission-standard">Standard</label>
+                <input type="radio" name="transmission" id="transmission-standard">
+                <label for="transmission-automatic">Automatic</label>
+                <input type="radio" name="transmission" id="transmission-automatic">
+                <label for="insurance">Insurance</label>
+                <input type="checkbox" name="insurance" id="insurance">
+                <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                <input id="horizontal-spinner" class="ui-spinner-input">
+                <button>Book Now!</button>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Rental Car</legend>
+            <div class="ui-controlgroup-vertical">
+                <select>
+                    <option>苹果</option>
+                    <option>香蕉</option>
+                    <option>橘子</option>
+                    <option>葡萄</option>
+                    <option>柚子</option>
+                </select>
+                <label for="transmission-standard-v">Standard</label>
+                <input type="radio" name="transmission--v" id="transmission-standard-v">
+                <label for="transmission-automatic-v">Automatic</label>
+                <input type="radio" name="transmission-v" id="transmission-automatic-v">
+                <label for="insurance">Insurance</label>
+                <input type="checkbox" name="insurance" id="insurance-v">
+                <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                <input id="vertical-spinner" class="ui-spinner-input">
+                <button id="book" class="ui-button">Book Now!</button>
+            </div>
+        </fieldset>
+    </div>
+<!--10-->
+    <div class="datepicker">
+        <p>Date:<input type="text" id="datepicker"></p>
+    </div>
+<!--11-->
+    <div id="dialog" title="Basic dialog">
+        <p>捏蝴蝶好肚饿官方好肚饿我蝴蝶蝴蝶好的还对还得胡丢额会丢儿后妞儿回合队二位好丢额的黑户对而蝴蝶胡迪武汉的</p>
+    </div>
+<!--12-->
+    <ul id="menu">
+        <li class="ui-state-disabled"><div>苹果</div></li>
+        <li><div>香蕉</div></li>
+        <li><div>橘子</div></li>
+        <li><div>桃子</div>
+            <ul>
+                <li class="ui-state-disabled"><div>水蜜桃</div></li>
+                <li><div>红不软</div>
+                    <ul>
+                        <li><div>大红不软</div></li>
+                        <li><div>小红不软</div></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+<!--13-->
+    <div id="progressbar">进度条</div>
+<!--14-->
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+            <li><a href="#tabs-2">Proin dolor</a></li>
+            <li><a href="#tabs-3">Aenean lacinia</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        <div id="tabs-2">
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        <div id="tabs-3">
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+        </div>
+    </div>
+<!--15-->
+    <div class="tips">
+        <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+            the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.</p>
+    </div>
+</body>
+</html>

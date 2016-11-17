@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/bt.css">
+</head>
+<body>
+<!--导航栏-->
+<div class="top">
+    <a href="javaScript:;" class="t">亲,请登录</a>
+    <a href="javaScript:;" class="t1">免费注册</a>
+    <a href="javaScript:;" class="t1">手机逛淘宝</a>
+    <div class="site-nav-icon">
+        <a class="site-nav">我的淘宝<img src="../images/2.png" class="icon"></a>
+        <a class="site-nav"><img src="../images/3.png" class="icon">购物车<img src="../images/0.png" class="icon"><img
+                src="../images/2.png" class="icon"></a>
+        <a class="site-nav"><img src="../images/1.png" class="icon">收藏<img src="../images/2.png" class="icon"></a>
+        <a class="site-nav">商品分类</a>
+        <img src="../images/4.png">
+        <a class="site-nav">卖家中心<img src="../images/2.png" class="icon"></a>
+        <a class="site-nav">联系客服<img src="../images/2.png" class="icon"></a>
+        <a class="site-nav"><img src="../images/5.png" class="icon" style="margin-right: 2px">网站导航<img
+                src="../images/2.png" class="icon"></a>
+    </div>
+</div>
+<!--搜索栏-->
+<div class="logoSearch">
+    <div>
+        <h1 class="logo">
+            <a href="//www.taobao.com" target="_blank"><img src="../images/tlg.png" class="logoImg"></a>
+        </h1>
+    </div>
+    <div class="search-bd" id="searchBox">
+        <ul class="tao-tmall-shop" id="tts">
+            <li class="taoselect" id="taobao">宝贝</li>
+            <li id="tmall">天猫</li>
+            <li id="shop">店铺</li>
+        </ul>
+        <div class="taoSearch" id="taoSearch">
+            <input type="text" class="Search-bd-input" id="searchBd" placeholder="    六一儿童玩具">
+            <img src="../images/6.png" class="taoSearch-icon" id="taoSearch-icon" style="display: block"/>
+            <a href="javaScript:;" class="taoSearch-camera">
+                <img src="../images/7.png"/>
+            </a>
+            <ul class="searchList" id="searchList">
+
+            </ul>
+        </div>
+        <div class="tmallSearch">
+            <input type="text" class="Search-bd-input" id="searchTd" placeholder="      完美音质,近在咫尺">
+            <img src="../images/6.png" class="taoSearch-icon">
+        </div>
+        <div class="shopSearch">
+            <input type="text" class="Search-bd-input" id="searchSd">
+        </div>
+        <div class="search">
+            <button type="submit" class="search-click" id="searchClick">搜索</button>
+        </div>
+    </div>
+    <a href="javaScript:;" class="search-tip">高级搜索</a>
+    <div id="qr">
+        <a href="//www.taobao.com/m" class="qr-bd">
+            <span class="h">手机淘宝</span>
+            <img src="../images/8.png" class="h-qr">
+        </a>
+    </div>
+    <a href="javascript:;" class="qr-close"><img src="../images/9.png"></a>
+    <div class="search-hot-line">
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">单肩包</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">机械键盘</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">双肩包男</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">女T恤</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">男士胸包</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">黄琍</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">时尚男包</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">女士凉鞋</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">巧克力</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">斜挎包</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">水杯</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-word">登山包</a>
+        <a href="https://www.taobao.com/" target="_blank" class="search-hot-more">更多 <img src="../images/10.png"/></a>
+    </div>
+</div>
+<!--导购栏-->
+<div class='shop-guide'>
+    <div class="service-hd">
+        <a href="https://www.taobao.com/">
+            <h3>主题市场</h3>
+            <img src="../images/11.png" class="service-hd-icon"/>
+        </a>
+    </div>
+    <ul class="shop-guide-service">
+        <li class="shop-guide-li">
+            <img src="../images/12.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">女装</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">男装</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">内衣</a><img
+                src="../images/13.png" class="shop-guide-li-icon-hot">
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left">
+        </li>
+        <li class="shop-guide-li">
+            <img src="../images/15.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">鞋靴</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">箱包</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">配件</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+        <li class="shop-guide-li">
+            <img src="../images/16.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">童装玩具</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">孕产</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">用品</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot ">
+        </li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/17.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">家电</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">数码</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">手机</a><img
+                src="../images/13.png" class="shop-guide-li-icon-hot">
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left">
+
+
+        </li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/18.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">美妆</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">洗护</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">保健品</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-3">
+
+        </li>
+
+        <li class="shop-guide-li">
+            <img src="../images/19.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">珠宝</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">眼镜</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">手表</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+        <li class="shop-guide-li"><img src="../images/20.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                                       class="shop-guide-item">运动</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">户外</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">乐器</a><img
+                src="../images/13.png" class="shop-guide-li-icon-hot">
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left">
+        </li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/21.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">游戏</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">动漫</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">影视</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/22.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">美食</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">生鲜</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">零食</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/23.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">鲜花</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">宠物</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">农资</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/24.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">房产</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">装修</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">建材</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+        <li class="shop-guide-li">
+            <img src="../images/25.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">家具</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">家饰</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">家纺</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-2"></li>
+
+        <li class="shop-guide-li">
+            <img src="../images/26.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">汽车</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">二手车</a>/<a href="https://www.taobao.com/"
+                                                                                  class="shop-guide-item">用品</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-3">
+
+        </li>
+
+        <li class="shop-guide-li">
+            <img src="../images/27.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">办公</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">DIY</a>/<a href="https://www.taobao.com/"
+                                                                                  class="shop-guide-item">五金电子</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-4">
+        </li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/28.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">百货</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">收纳</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">家庭保健</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-5">
+        </li>
+
+
+        <li class="shop-guide-li">
+            <img src="../images/29.png" class="shop-guide-li-icon"><a href="https://www.taobao.com/"
+                                                                 class="shop-guide-item">学习</a>/<a
+                href="https://www.taobao.com/" class="shop-guide-item">卡卷</a>/<a href="https://www.taobao.com/"
+                                                                                 class="shop-guide-item">本地服务</a>
+            <img src="../images/14.png" class="shop-guide-li-icon-hot shop-guide-li-icon-left-5">
+        </li>
+    </ul>
+    <div>
+        <a href="http://www.taobao.com/">
+            <img src="../images/TB1CmmOJVXXXXbWXVXXXXXXXXXX-380-80.jpg" class="service-ft-img">
+        </a>
+    </div>
+    <!--详情页-->
+    <div class="shop-guide-detail " id="shop-guide-detail" style="display: none;">
+        <div class="shop-guide-float">
+            <div class="shop-guide-panel1">
+                <h5>
+                    <a href="http://www.taoabao.com" target="_blank">
+                        <img src="../images/223.jpg" style="width: 28px;height: 28px">
+                        <em>女装</em>
+                    </a>
+                    <a href="http://www.taoabao.com" target="_blank">
+                        <span>更多
+                            <img src="../images/10.png">
+                        </span>
+
+                    </a>
+                </h5>
+                <p>
+                    <a href="">韩版</a>
+                    <a href="">新品</a>
+                    <a href="">淘品牌</a>
+                    <a href="">90后潮流志</a>
+                    <a href="">连衣裙</a>
+                </p>
+            </div>
+        </div>
+        <div class="shop-guide-rmd">
+            <h3>
+                <img src="../images/224.png">猜你喜欢
+            </h3>
+            <div class="desc">实时推荐最适合你的宝贝</div>
+            <div class="shop-rmd-list">
+                <a href="">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+                <a href="" style="margin-right: 0;">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+                <a href="">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+                <a href="" style="margin-right: 0">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+                <a href="">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+                <a href="" style="margin-right: 0">
+                    <img src="../images/225.jpg">
+                    <span>Armani阿玛尼手表 男表男士真皮皮带 多功能日历 石英男表AR2448</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--second-navi-->
+<div class="second-navi">
+    <ul>
+        <li class="aaaa"><a href="http://www.tmall.com" class="second-navi-main">天猫</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-main">聚划算</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-main">天猫超市</a></li>
+        <li class="pipe">|</li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">淘抢购</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">电器城</a></li>
+        <li><a href="http://www.taobao.com " class="second-navi-sup">司法拍卖</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">中国制造</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">特色中国</a></li>
+        <li class="pipe">|</li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">阿里旅行</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">智能生活</a></li>
+        <li><a href="http://www.taobao.com" class="second-navi-sup">苏宁易购</a></li>
+    </ul>
+</div>
+<!--楼层-->
+<div class="floor" id="floor" style="position: absolute;">
+    <a href="#tb-favorite" class="floor-1" id="floor1">
+        <strong style="color: #FEFEFE;" id="floor1Font">
+            我常<br>逛的
+        </strong>
+    </a>
+    <a href="#fashionFloor" class="floor-fashion" id="floorFashion">
+        <strong>
+            <i>时尚</i>
+        </strong>
+    </a>
+    <a href="#life" class="floor-life" id="floorLife">
+        <strong style="color:#8d7afb">
+            <i>品质</i>
+        </strong>
+    </a>
+    <a href="#play-special" class="floor-play-special" id="floorPlaySpecial">
+        <strong style="color: #A8C001;">
+            <i>特色</i>
+        </strong>
+    </a>
+    <a href="#substantial" class="floor-substantial" id="floorSubstantial">
+        <strong style="color:#a2745b;">
+            <i>实惠</i>
+        </strong>
+    </a>
+    <a href="javascript:;" class="function" id="functionTop">
+        <strong>
+            <i>
+                <img src="../images/228.png">
+            </i>
+            顶部
+        </strong>
+    </a>
+    <a href="javascript:;" class="function2">
+        <strong>
+            <i>反馈</i>
+        </strong>
+    </a>
+    <a href="javascript:;" class="function-last">
+        <strong>
+            暴恐<br>举报
+        </strong>
+    </a>
+</div>
+
+<!--轮播图-->
+<div class="Imove" id="Imove">
+    <div class="inner-Imove" id="inner-Imove">
+        <div>
+            <img src="../images/TB-520-280.jpg">
+        </div>
+        <div>
+            <img src="../images/30.jpg">
+        </div>
+        <div>
+            <img src="../images/31.jpg">
+        </div>
+        <div>
+            <img src="../images/32.jpg">
+        </div>
+        <div>
+            <img src="../images/33.jpg">
+        </div>
+        <div>
+            <img src="../images/TB-520-280.jpg">
+        </div>
+    </div>
+    <ul class="Imove-tip" id="ImoveTip">
+        <li class="select"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <a href="javaScript:;" class="lBtn" id="lBtn"></a>
+    <a href="javaScript:;" class="rBtn" id="rBtn"></a>
+</div>
+<div class="hd-tanx">
+    <a href="https://www.taobao.com" target="_blank">
+        <img src="../images/34.jpg">
+    </a>
+</div>
+<!--登录-->
+
+<div class="menber">
+    <a href="https://www.taobao.com" class="menber-logo">
+        <img src="../images/36.jpg" class="menber-logo-img">
+    </a>
+    <span class="member-nick-info">Hi!你好</span>
+    <p class="member-tbj">
+        <a href="https://www.taobao.com">
+            <img src="../images/37.png" alt="领淘宝金币" class="s_member">
+            领淘宝金币抵钱
+        </a>
+        <span>或去</span>
+        <a href="https://www.taobao.com">会员俱乐部</a>
+    </p>
+    <div class="member-select">
+        <a href="https://www.taobao.com" class="btn-login">登录</a>
+        <a href="https://www.taobao.com" class="btn-middle">注册</a>
+        <a href="https://www.taobao.com" class="btn-shop">开店</a>
+    </div>
+
+</div>
+<!--公告-->
+<div class="tb-notice" id="tb-notice">
+    <ul class="notice-hd" id="notice-hd">
+        <li class="select"><a href="https://www.taobao.com" target="_blank">公告</a></li>
+        <li><a href="https://www.taobao.com" target="_blank">规则</a></li>
+        <li><a href="https://www.taobao.com" target="_blank">安全</a></li>
+        <li><a href="https://www.taobao.com" target="_blank">论坛</a></li>
+        <li><a href="https://www.taobao.com" target="_blank">公益</a></li>
+    </ul>
+    <div class="notice-bd" style="display: block;">
+        <ul class="notice-bd-style">
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">阿里巴巴集团在东京宣布启动"日本招商中心"</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">国内最大分享经济平台</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">三大运营商天猫"合体"</a></li>
+        </ul>
+    </div>
+    <div class="notice-bd" style="display: none;">
+        <ul class="notice-bd-style">
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">出售假冒商品规则变更</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">商品发布数量限制变更</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">中国质造市场管理规范</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">淘宝网营销规则变更</a></li>
+
+        </ul>
+    </div>
+    <div class="notice-bd" style="display: none;">
+        <ul class="notice-bd-style">
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">淘宝行业规划发布会</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">创业社区招募管理员</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">原创设计女装乐往</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">是赚钱还是骗子</a></li>
+        </ul>
+
+
+    </div>
+    <div class="notice-bd" style="display: none;">
+        <ul class="notice-bd-style">
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">骗术揭秘：骗子供应商</a></li>
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">冒充军队人员行骗</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">阿里巴巴联手公安打假</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">4家假鞋厂被连锅端</a></li>
+        </ul>
+    </div>
+    <div class="notice-bd" style="display: none;">
+        <ul class="notice-bd-style">
+            <li><a href="https://www.taobao.com" target="_blank" style="color: #F40">阿里与残联出助残政策</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">一图看懂联合公益计划</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">公益宝贝卖家发票索取</a></li>
+            <li><a href="https://www.taobao.com" target="_blank">公益机构淘宝开店攻略</a></li>
+        </ul>
+    </div>
+</div>
+<!--天猫轮播图-->
+<div class="tb-tmall-Imove">
+    <div class="tmall-hd" id="tmall-hd">
+        <span>天猫必逛</span>
+        <em>热门品牌,天天上天猫</em>
+        <strong id="strongNum"><i>1</i>/6</strong>
+    </div>
+    <div class="tmall-Img-outer" id="tio">
+        <div class="tmall-Img-inner" id="tii">
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="height: 201px; width: 173px;border-bottom: 1px solid #ebebeb;"><img src="../images/39.jpg"
+                                                                                                  style="height: 201px; width: 173px; display: block;"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/40.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/41.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width:173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb; margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/42.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/43.jpg"></a>
+                </div>
+            </div>
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/57.jpg">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/58.jpg">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/59.jpg">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/60.jpg">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/61.jpg">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank">
+                        <img src="../images/62.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="height: 201px; width: 173px;border-bottom: 1px solid #ebebeb;"><img src="../images/39.jpg"
+                                                                                                  style="height: 201px; width: 173px; display: block;"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/40.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/41.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width:173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb; margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/42.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/43.jpg"></a>
+                </div>
+            </div>
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="height: 201px; width: 173px;border-bottom: 1px solid #ebebeb;"><img src="../images/39.jpg"
+                                                                                                  style="height: 201px; width: 173px; display: block;"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/40.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/41.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width:173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb; margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/42.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/43.jpg"></a>
+                </div>
+            </div>
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="height: 201px; width: 173px;border-bottom: 1px solid #ebebeb;"><img src="../images/39.jpg"
+                                                                                                  style="height: 201px; width: 173px; display: block;"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/40.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/41.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width:173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb; margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/42.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/43.jpg"></a>
+                </div>
+            </div>
+            <div class="tmall-Img-inner-div">
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="height: 201px; width: 173px;border-bottom: 1px solid #ebebeb;"><img src="../images/39.jpg"
+                                                                                                  style="height: 201px; width: 173px; display: block;"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/40.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/41.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank"
+                       style="width:173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb; margin-left: -1px;border-bottom: 1px solid #ebebeb;"><img
+                            src="../images/42.jpg"></a>
+                </div>
+                <div>
+                    <a href="https://www.taobao.com" target="_blank" style="width: 173px;height: 100px;overflow: hidden;border-left: 1px solid #ebebeb;margin-left: -1px;
+border-bottom: 1px solid #ebebeb;"><img src="../images/43.jpg"></a>
+                </div>
+            </div>
+
+        </div>
+        <ul class="tmall-Imove-tip" id="tit">
+            <li class="selectT"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <a href="javaScript:;" class="lBtn2" id="lBtn2" style="display: none;"></a>
+        <a href="javaScript:;" class="rBtn2" id="rBtn2" style="display: none;"></a>
+    </div>
+</div>
+<!--今日特卖-->
+<div class="special-sale">
+    <h5>今日特卖</h5>
+    <a href="http://www.taobao.com" target="_blank"><img src="../images/44.jpg"></a>
+</div>
+
+
+<!--right 选项卡-->
+<div class="right-tab-c">
+    <ul class="cove-list">
+        <li style="border-left: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/45.jpg">
+                <p>充话费</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/46.jpg">
+                <p>游戏</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/47.jpg">
+                <p>旅行</p>
+            </a>
+        </li>
+        <li style="border-right: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/48.jpg">
+                <p>保险</p>
+            </a>
+        </li>
+        <li style="border-left: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/49.jpg">
+                <p>彩票</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/50.jpg">
+                <p>电影</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/51.jpg">
+                <p>点外卖</p>
+            </a>
+        </li>
+        <li style="border-right: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/52.jpg">
+                <p>理财</p>
+            </a>
+        </li>
+        <li style="border-left: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/53.jpg">
+                <p>找服务</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/54.jpg">
+                <p>音乐</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/55.jpg">
+                <p>水电费</p>
+            </a>
+        </li>
+        <li style="border-right: none;">
+            <a href="http://www.taobao.com" target="_blank">
+                <img src="../images/56.jpg">
+                <p>火车票</p>
+            </a>
+        </li>
+    </ul>
+    <div class="cove-box" style="display:none;">
+        <a href="javascript:;" class="cove-box-close"><img src="../images/9.png"></a>
+        <div class="cove-box-item">
+            <div class="box-item-top">
+
+                <a href="http://www.taobao.com" target="_blank" class="box-item-detail0">充话费</a>
+                <a href="http://www.taobao.com" target="_blank" class="box-item-detail1">充流量</a>
+                <a href="http://www.taobao.com" target="_blank" class="box-item-detail2">充固话</a>
+                <a href="http://www.taobao.com" target="_blank" class="box-item-detail3">充宽带</a>
+            </div>
+            <div class="box-item-out">
+                <div class="box-item-inner0">
+                    <input type="text" placeholder="请输入号码">
+                    <img src="../images/234.png">
+                </div>
+                <div class="box-item-inner1"></div>
+                <div class="box-item-inner2"></div>
+                <div class="box-item-inner3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
